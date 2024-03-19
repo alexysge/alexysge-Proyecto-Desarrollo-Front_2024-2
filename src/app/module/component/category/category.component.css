@@ -1,0 +1,12 @@
+/* styles.css */
+
+.col {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tabla-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
