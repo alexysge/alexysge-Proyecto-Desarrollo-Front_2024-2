@@ -1,5 +1,18 @@
 /* styles.css */
 
+.card-header{
+    background-color: #28a745;
+    color: black;
+    padding: 30px;
+    padding-top: 30px;
+}
+
+.title{
+    color: azure;
+    font-size: xx-large;
+    text-align: center;
+}
+
 .col {
     max-width: 1280px;
     margin: 0 auto;
@@ -8,5 +21,25 @@
 
 .tabla-container {
     max-width: 1280px;
+    padding-top: 30px;
     margin: 0 auto;
+}
+
+
+table {
+    text-align: center;
+}
+
+th, .td-open, .td-close {
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+.input-error-message{
+    color: #CA2A4A
+}
+
+.modal-header{
+    background-color: #28a745;
 }
