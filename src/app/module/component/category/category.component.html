@@ -15,29 +15,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-success">
-                    <th scope="row">1</th>
-                    <td>TECH</td>
-                    <td>Tecnología</td>
-                    <td>Activa</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>FASH</td>
-                    <td>Moda</td>
-                    <td>Activa</td>
-                </tr>
-                <tr class="table-success">
-                    <th scope="row">3</th>
-                    <td>TRAV</td>
-                    <td>Viajes</td>
-                    <td>Activa</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>FOOD</td>
-                    <td>Comida</td>
-                    <td>Activa</td>
+                <tr *ngFor="let category of categories; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ category.acronym }}</td>
+                    <td>{{ category.category }}</td>
+                    <td>{{ category.status }}</td>
                 </tr>
             </tbody>
         </table>
