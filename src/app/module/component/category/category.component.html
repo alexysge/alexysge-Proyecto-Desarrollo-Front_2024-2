@@ -1,8 +1,6 @@
 <body>
     <div class="col">
-        <div class="card-header">
-            <h4 class="title">Categorías</h4>
-        </div>
+        <h4>Categorias</h4>
     </div>
     <!-- Tabla -->
     <div class="tabla-container">
@@ -10,10 +8,10 @@
             <thead>
                 <tr class="table-dark">
                     <!-- Registros -->
-                    <th scope="col">ID</th>
-                    <th scope="col">Acrónimo</th>
-                    <th scope="col">Categoría</th>
-                    <th scope="col">Estatus</th>
+                    <th scope="col">category_id</th>
+                    <th scope="col">acronym</th>
+                    <th scope="col">category</th>
+                    <th scope="col">status</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,48 +23,5 @@
                 </tr>
             </tbody>
         </table>
-
-        <!-- Botón -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalForm"
-            (click)="showModalForm()">Nueva Categoría</button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true"
-            data-bs-backdrop="static" data-bs-keyboard="false">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="categoryModalLabel">Nueva Categoría</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
-                            <div class="mb-3">
-                                <label for="category" class="form-label">Categoría</label>
-                                <input type="text" class="form-control" formControlName="category"
-                                    placeholder="Nombre de la categoría"
-                                    [ngClass]="{'is-invalid': form.controls['category'].errors && submitted}">
-
-                                <small class="input-error-message" *ngIf="form.controls['category'].errors && submitted">Ingresa un nombre de categoría</small>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="acronym" class="form-label">Acrónimo</label>
-                                <input type="text" class="form-control" formControlName="acronym"
-                                    placeholder="Acrónimo de la categoría"
-                                    [ngClass]="{'is-invalid': form.controls['acronym'].errors && submitted}">
-
-                                <small class="input-error-message" *ngIf="form.controls['acronym'].errors && submitted">Ingresa un acrónimo de categoría</small>
-                            </div>
-
-                            <div class="form-button">
-                                <button type="submit" class="btn btn-success btn-new">Guardar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
